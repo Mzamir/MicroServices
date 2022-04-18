@@ -16,6 +16,7 @@ public class NotificationService {
     private final NotificationsRepository repository;
 
     public void saveNotification(SendingNotificationRequest notificationRequest) {
+        log.info("saveNotification " + notificationRequest);
         repository.save(NotificationEntity.builder()
                 .customerId(notificationRequest.getCustomerId())
                 .notificationText(notificationRequest.getNotificationText())

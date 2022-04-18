@@ -8,10 +8,12 @@ import com.example.customer.models.CustomerRegistrationRequest;
 import com.example.customer.repository.CustomerRepository;
 import com.example.customer.models.entities.Customer;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class CustomerService {
     private final CustomerRepository repository;
     private final FraudClient fraudClient;
@@ -34,5 +36,6 @@ public class CustomerService {
                     .notificationText("First notification")
                     .build());
         }
+        log.info("Customer " + customer);
     }
 }

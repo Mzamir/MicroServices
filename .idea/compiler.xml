@@ -11,9 +11,11 @@
         <module name="clients" />
         <module name="Customer" />
         <module name="fraud" />
+        <module name="amqp" />
         <module name="Fraud" />
         <module name="eureka-server" />
         <module name="notifications" />
+        <module name="ApiGateway" />
       </profile>
     </annotationProcessing>
   </component>
